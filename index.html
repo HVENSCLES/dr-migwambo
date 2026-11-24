@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Migwambo | My Learning Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-icon">📚</span><span>Dr. Migwambo</span></div>
+    <p class="nav-label">YOUR SPACE</p>
+    <button class="nav active" data-filter="all">⌂ &nbsp;Dashboard</button>
+    <button class="nav" data-filter="favorites">♡ &nbsp;Favorites</button>
+    <p class="nav-label">COLLECTIONS</p>
+    <div id="categoryNav"></div>
+    <div class="quote">“Little by little, we are going to make it.” 🌷</div>
+  </aside>
+
+  <main>
+    <header>
+      <div><h1>Welcome back 🌷</h1><p>Your knowledge, beautifully organized.</p></div>
+      <div class="header-actions"><input id="search" placeholder="Search your library..."><button id="addBtn">＋ Add document</button></div>
+    </header>
+
+    <section class="hero">
+      <div><p class="eyebrow">YOUR PERSONAL LIBRARY</p><h2>A little space to grow.</h2>
+      <p>Keep your textbooks, notes and ideas close. Find what you need and keep learning.</p></div>
+      <div class="hero-art">🪴</div>
+    </section>
+
+    <section class="stats">
+      <div class="stat"><span>📄</span><div><b id="total">0</b><small>Documents</small></div></div>
+      <div class="stat"><span>⭐</span><div><b id="favorites">0</b><small>Favorites</small></div></div>
+      <div class="stat"><span>🗂️</span><div><b id="collections">0</b><small>Collections</small></div></div>
+    </section>
+
+    <section><div class="section-head"><h3>Collections</h3><span>Choose a subject</span></div><div id="categories" class="categories"></div></section>
+    <section><div class="section-head"><h3 id="listTitle">My documents</h3><select id="sort"><option value="recent">Newest</option><option value="name">Name A–Z</option></select></div><div id="documentGrid" class="document-grid"></div></section>
+    <footer><span>Dr. Migwambo</span><span>Built as a learning project ✨</span></footer>
+  </main>
+
+  <dialog id="uploadDialog">
+    <form id="uploadForm" method="dialog">
+      <h2>Add a document</h2><p>Save a document in a collection on this device.</p>
+      <label for="docName">Document name</label><input id="docName" placeholder="Optional title">
+      <label for="docCategory">Collection</label><select id="docCategory"></select>
+      <label for="docFile">Choose a file</label><input id="docFile" type="file" required>
+      <div class="dialog-actions"><button type="button" class="secondary" id="cancel">Cancel</button><button type="submit">Save document</button></div>
+    </form>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
